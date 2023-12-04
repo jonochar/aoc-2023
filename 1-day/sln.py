@@ -1,3 +1,6 @@
+# Challenge passed. Inefficiencies in looping throug hthe lines forward and backwards when you could stop at first
+# digit identified. Also probably don't need a Change Line and a Find in Line method if performance really needed to
+# be evaluated, but this method made it easier to test and debug.
 
 answer = 0
 first = 0
@@ -100,12 +103,6 @@ def findValueInLine(l):
                 last = c
                 found = True
     return first, last
-
-test = "fouronethreeone"
-new_line = replaceWordsWithNum(test)
-print("Test line: {}".format(test))
-print("NewT line: {}".format(new_line))
-print("Test  Ans: {}".format(findValueInLine(new_line)))
 
 with open("input.txt") as f:
     for l in f:
